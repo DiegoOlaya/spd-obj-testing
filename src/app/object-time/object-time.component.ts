@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ComplexNum } from './complex-num';
 
 @Component({
   selector: 'app-object-time',

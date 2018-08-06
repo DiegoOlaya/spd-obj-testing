@@ -66,6 +66,16 @@ export class ComplexNum {
   }
 
   /**
+    Multiply this complex number by a constant.
+    @WARNING: This function WILL OVERWRITE THE CURRENT VALUE of this object with
+    the result of the computation.
+    @arg const Type: number. The constant to multiply this complex number by.
+  */
+  public multiplyByConst(const:number) {
+    this.setValues(this.real * const, this.imaginary * const);
+  }
+
+  /**
     Divide this complex number by another complex number.
     @WARNING: This function WILL OVERWRITE THE CURRENT VALUE of this object with
     the result of the computation.

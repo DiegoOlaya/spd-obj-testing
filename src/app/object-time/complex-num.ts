@@ -101,6 +101,18 @@ export class ComplexNum {
   }
 
   /**
+    Subtact another complex number from this complex number.
+    @WARNING: This function WILL OVERWRITE THE CURRENT VALUE of this object with
+    the result of the computation.
+    @arg cNum Type: ComplexNum. The complex number to be subracted from this.
+  */
+  public subtract(cNum:ComplexNum) {
+    var newReal = this.real - cNum.getReal();
+    var newImag = this.imaginary - cNum.getImaginary();
+    this.setValues(newReal, newImag);
+  }
+
+  /**
     Take the square root of this number.
     @WARNING: This function WILL OVERWRITE THE CURRENT VALUE of this object with
     the result of the computation.

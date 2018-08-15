@@ -1,3 +1,11 @@
-<p>
-  test-accuracy works!
+<h2>Verify Agreement Between Methods</h2>
+Random Number Range: <input type="number" [(ngModel)]="randRange" /><br />
+<button (click)="generateNums(randRange)">Generate Numbers</button><br />
+<br />
+<button (click)="compute()">Perform Computation</button>
+<br />
+<h3>Results</h3>
+<p style="font-family:monospace">
+  Object: {{objResult[0]}}+{{objResult[1]}}i <br />
+  Number: {{numResult[0]}}+{{numResult[1]}}i
 </p>

@@ -71,8 +71,8 @@ export class ComplexNum {
     the result of the computation.
     @arg const Type: number. The constant to multiply this complex number by.
   */
-  public multiplyByConst(const:number) {
-    this.setValues(this.real * const, this.imaginary * const);
+  public multiplyByConst(constant:number) {
+    this.setValues(this.real * constant, this.imaginary * constant);
   }
 
   /**

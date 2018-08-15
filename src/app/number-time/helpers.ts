@@ -1,9 +1,9 @@
 /**
  * General internal math helper functions
  */
-var helpers = {};
+export var helpers:any = {};
 
-var sq = helpers.sq = function sq( x ){
+helpers.sq = function sq( x ){
     return x * x;
     // return Math.pow(x,2);
 };
@@ -580,5 +580,3 @@ helpers.csqrt = function csqrt(a,ai){
 helpers.sign = function sign(x) {
     return typeof x === 'number' ? x ? x < 0 ? -1 : 1 : x === x ? 0 : NaN : NaN;
 };
-
-module.exports = helpers;

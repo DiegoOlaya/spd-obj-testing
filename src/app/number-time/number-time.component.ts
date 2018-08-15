@@ -19,6 +19,7 @@ export class NumberTimeComponent implements OnInit {
     for (var i = 0; i < cycles; i++) {
       result += this.timeSingle(cNumList);
     }
+    this.timingResult = result;
   }
 
   public timeSingle(cNumList?:number[]) {

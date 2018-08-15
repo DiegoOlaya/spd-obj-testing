@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ObjectTimeComponent } from './object-time/object-time.component';
+import { NumberTimeComponent } from './number-time/number-time.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ObjectTimeComponent
+    ObjectTimeComponent,
+    NumberTimeComponent
   ],
   imports: [
     BrowserModule

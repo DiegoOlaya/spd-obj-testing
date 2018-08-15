@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ObjectTimeComponent } from './object-time/object-time.component';
 import { NumberTimeComponent } from './number-time/number-time.component';
+import { TestAccuracyComponent } from './test-accuracy/test-accuracy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ObjectTimeComponent,
-    NumberTimeComponent
+    NumberTimeComponent,
+    TestAccuracyComponent
   ],
   imports: [
     BrowserModule

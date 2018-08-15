@@ -15,7 +15,8 @@ import { TestAccuracyComponent } from './test-accuracy/test-accuracy.component';
     TestAccuracyComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

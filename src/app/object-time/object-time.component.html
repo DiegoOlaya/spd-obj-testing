@@ -1,3 +1,6 @@
-<p>
-  object-time works!
-</p>
+<h2>Object Implementation Timing</h2>
+Number of Cycles: <input type="number" [(ngModel)]="usrCycles" /><br />
+Random Number Range: <input type="number" [(ngModel)]="randRange" /><br />
+<button name="start" (click)="startTiming(usrCycles)">Start Timing</button><br />
+<br />
+<h4>Timing Result: {{timingResult}} ms</h4>

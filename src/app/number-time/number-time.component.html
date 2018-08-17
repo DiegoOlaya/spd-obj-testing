@@ -1,3 +1,5 @@
-<p>
-  number-time works!
-</p>
+<h2>Time Number Implementation</h2>
+Random Number Range: <input type="number" [(ngModel)]="randRange" /><br />
+Number of Cycles: <input type="number"  [(ngModel)]="cycles" /><br />
+<button (click)="startTiming(cycles)">Start Timing</button>
+<h4>Timing Result: {{timingResult}} ms</h4>

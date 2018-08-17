@@ -1,3 +1,13 @@
-<p>
-  time-grapher works!
-</p>
+<h2>Genearte Timing Plot</h2>
+<h3>Set Cycle Increments</h3>
+Starting Number of Cycles: <input type="number" [(ngModel)]="start" /><br />
+Ending Number of Cycles: <input type="number" [(ngModel)]="end" /><br />
+Cycle Count Increment: <input type="number" [(ngModel)]="increment" /><br />
+<button (click)="setCyclesArray(start, end, increment)">Save Settings</button><br />
+<h3>Specify Math.random() Multiplier</h3>
+Multiplier Value: <input type="number" [(ngModel)]="randRange" /><br />
+<button [disabled]="!xAxisSet" (click)="takeTimeData()">Begin Timing</button><br />
+<button [disabled]="!timingFinished" (click)="plotData()">Plot Timing Data</button>
+<div id="plotContainer">
+  
+</div>

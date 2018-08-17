@@ -14,15 +14,15 @@ export class NumberTimeComponent implements OnInit {
   public resultR:number;
   public resultI:number;
 
-  public startTiming(cycles:number, cNumList?:number[]) {
+  public startTiming(cycles:number, range:number=51, cNumList?:number[]) {
     var result = 0;
     for (var i = 0; i < cycles; i++) {
-      result += this.timeSingle(cNumList);
+      result += this.timeSingle(range, cNumList);
     }
     this.timingResult = result;
   }
 
-  public timeSingle(cNumList?:number[]) {
+  public timeSingle(range:number, cNumList?:number[]) {
     var timer = window.performance;
     var A1R:number,
         A1I:number,
@@ -46,26 +46,26 @@ export class NumberTimeComponent implements OnInit {
         A10I:number;
 
     if (cNumList == undefined) {
-      A1R = Math.random() * this.randRange,
-      A1I = Math.random() * this.randRange,
-      A2R = Math.random() * this.randRange,
-      A2I = Math.random() * this.randRange,
-      A3R = Math.random() * this.randRange,
-      A3I = Math.random() * this.randRange,
-      A4R = Math.random() * this.randRange,
-      A4I = Math.random() * this.randRange,
-      A5R = Math.random() * this.randRange,
-      A5I = Math.random() * this.randRange,
-      A6R = Math.random() * this.randRange,
-      A6I = Math.random() * this.randRange,
-      A7R = Math.random() * this.randRange,
-      A7I = Math.random() * this.randRange,
-      A8R = Math.random() * this.randRange,
-      A8I = Math.random() * this.randRange,
-      A9R = Math.random() * this.randRange,
-      A9I = Math.random() * this.randRange,
-      A10R = Math.random() * this.randRange,
-      A10I = Math.random() * this.randRange;
+      A1R = Math.random() * range,
+      A1I = Math.random() * range,
+      A2R = Math.random() * range,
+      A2I = Math.random() * range,
+      A3R = Math.random() * range,
+      A3I = Math.random() * range,
+      A4R = Math.random() * range,
+      A4I = Math.random() * range,
+      A5R = Math.random() * range,
+      A5I = Math.random() * range,
+      A6R = Math.random() * range,
+      A6I = Math.random() * range,
+      A7R = Math.random() * range,
+      A7I = Math.random() * range,
+      A8R = Math.random() * range,
+      A8I = Math.random() * range,
+      A9R = Math.random() * range,
+      A9I = Math.random() * range,
+      A10R = Math.random() * range,
+      A10I = Math.random() * range;
     }
     else {
       A1R = cNumList[0],

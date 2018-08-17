@@ -1,13 +1,13 @@
 // NOTE: FOR THIS COMPONENT TO WORK, YOU MUST PASTE THE FOLLOWING HTML TO
 // src/index.html: <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>.
 
+declare var Plotly:any;
+
 import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-
-declare var Plotly:any;
 
 export class PlotlyGrapherService {
 
@@ -30,10 +30,14 @@ export class PlotlyGrapherService {
         x: xCoords,
         y: yData[i],
         type: "scatter",
-        mode: usrMode
+        mode: usrMode,
+        name: ""
       }
       if (traceNames != undefined && traceNames.length == yData.length) {
         trace.name = traceNames[i];
+      }
+      else {
+        trace.name = "trace" + i;
       }
       this.traceArray.push(trace);
     }
@@ -62,10 +66,12 @@ export class PlotlyGrapherService {
     @arg targetDivID:string. The ID of the div where the plot will go.
   */
   public plot(targetDivID:string) {
-    if (layout != undefined) {
+    if (this.layout != undefined) {
       Plotly.plot(targetDivID, this.traceArray, this.layout);
     }
-    Plotly.plot(targetDivID, this.traceArray);
+    else {
+      Plotly.plot(targetDivID, this.traceArray);
+    }
   }
 
 }

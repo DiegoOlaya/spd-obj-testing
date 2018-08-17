@@ -19,7 +19,7 @@ export class ObjectTimeComponent implements OnInit {
   /**
     Generate 10 complex numbers for use in timing function.
   */
-  private generateComplexNums(cNumList?:number[]) {
+  private generateComplexNums(range:number, cNumList?:number[]) {
     this.complexNums = [];
     if (cNumList != undefined) {
       this.cNumsFromList(cNumList);
@@ -27,7 +27,7 @@ export class ObjectTimeComponent implements OnInit {
     }
     for (var i = 0; i < 10; i++) {
       this.complexNums.push(
-        new ComplexNum(Math.random() * this.randRange, Math.random() * this.randRange)
+        new ComplexNum(Math.random() * range, Math.random() * range)
       );
     }
   }
@@ -110,8 +110,8 @@ export class ObjectTimeComponent implements OnInit {
     Times how long it takes to complete the calculation task a specific number of times.
     @arg cycles Type: number. The number of times to perform the computation.
   */
-  public startTiming(cycles:number, cNumList?:number[]) {
-    this.generateComplexNums(cNumList);
+  public startTiming(cycles:number, range:number=51, cNumList?:number[]) {
+    this.generateComplexNums(range, cNumList);
     var timer = window.performance;
     var start = timer.now();
     for (var i = 0; i < cycles; i++) {

@@ -32,8 +32,8 @@ export class TestAccuracyComponent implements OnInit {
   public compute() {
     var objComp = new ObjectTimeComponent();
     var numComp = new NumberTimeComponent();
-    numComp.timeSingle(this.randNums);
-    objComp.startTiming(1, this.randNums);
+    numComp.timeSingle(undefined, this.randNums);
+    objComp.startTiming(1, undefined, this.randNums);
     this.objResult = [objComp.compResult.getReal(), objComp.compResult.getImaginary()];
     this.numResult = [numComp.resultR, numComp.resultI];
   }

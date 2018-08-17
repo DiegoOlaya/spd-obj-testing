@@ -7,6 +7,7 @@ import { ObjectTimeComponent } from './object-time/object-time.component';
 import { NumberTimeComponent } from './number-time/number-time.component';
 import { TestAccuracyComponent } from './test-accuracy/test-accuracy.component';
 import { TimeGrapherComponent } from './time-grapher/time-grapher.component';
+import { PlotlyGrapherService } from './plotly-grapher.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { TimeGrapherComponent } from './time-grapher/time-grapher.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [PlotlyGrapherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
